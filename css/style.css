@@ -839,3 +839,182 @@ footer a:hover {
     }
 
 }
+
+
+/* ========================================
+   ANIMATED CONCEPTS SECTION
+======================================== */
+
+.animated-concepts {
+    padding: 100px 8%;
+    background: #f4f7fb;
+}
+
+.animated-concepts .section-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.animated-concepts .section-heading {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.animated-concepts .section-subtitle {
+    color: #2563eb;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 12px;
+}
+
+.animated-concepts .section-heading h2 {
+    font-size: 36px;
+    color: #0b2440;
+    margin-bottom: 15px;
+}
+
+.animated-concepts .section-heading p {
+    color: #64748b;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.animation-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.animation-card {
+    background: #ffffff;
+    border-radius: 16px;
+    padding: 25px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.animation-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+.animation-demo {
+    height: 190px;
+    background: #edf3ff;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 25px;
+    overflow: hidden;
+}
+
+.animation-card h3 {
+    color: #0b2440;
+    font-size: 20px;
+    margin-bottom: 12px;
+}
+
+.animation-card p {
+    color: #64748b;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* Typing Animation */
+
+.typing-text {
+    color: #12355b;
+    font-size: 19px;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 3px solid #2563eb;
+    width: 0;
+    animation: typing 4s steps(17, end) infinite,
+               blink 0.7s step-end infinite;
+}
+
+@keyframes typing {
+    0% {
+        width: 0;
+    }
+
+    50%, 75% {
+        width: 17ch;
+    }
+
+    100% {
+        width: 0;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Floating Animation */
+
+.floating-shape {
+    font-size: 75px;
+    color: #2563eb;
+    animation: floating 2s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-25px);
+    }
+}
+
+/* Rotating Animation */
+
+.rotating-shape {
+    font-size: 85px;
+    color: #12355b;
+    animation: rotating 4s linear infinite;
+}
+
+@keyframes rotating {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Responsive Design */
+
+@media (max-width: 900px) {
+    .animation-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .animated-concepts {
+        padding: 70px 5%;
+    }
+
+    .animated-concepts .section-heading h2 {
+        font-size: 28px;
+    }
+
+    .animation-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .animation-demo {
+        height: 170px;
+    }
+}
